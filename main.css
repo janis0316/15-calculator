@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+:root {
+    --white-background-color: #f7f8fb;
+    --white-button: #fafbfd;
+    --border-color: #ffffff;
+    --blue-color: #ade1ff;
+    --dark-blue-color: #109dff;
+    --results-color: #424242;
+    --light-grey-color: #d3d3d3;
+}
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+}
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    background-color: var(--light-grey-color);
+    height: 100vh;
+}
+main > .calculator {
+    width: 450px;
+    height: 660px;
+    background-color: var(--white-background-color);
+    border-radius: 15px;
+}
+main > .calculator > .results {
+    color: var(--results-color);
+    height: 120px;
+    font-size: 40px;
+    line-height: 40px;
+    padding: 40px 30px;
+    text-align: right;
+}
+main > .calculator > .keyboard {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+main > .calculator > .keyboard > .btn {
+    width: calc((100% - 5 * 25px) / 4);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--white-button);
+    font-size: 30px;
+    color: var(--dark-blue-color);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+}
+main > .calculator > .keyboard > .btn:hover {
+    background-color: var(--light-grey-color);
+    transition: all 0.5s;
+}
+main > .calculator > .keyboard > .two-lenght {
+    width: calc((100% - 5 * 25px) / 4 * 2 + 25px);
+}
+main > .calculator > .keyboard > .three-length {
+    width: calc((100% - 5 * 25px) / 4 * 3 + 2 * 25px);
+}
+main > .calculator > .keyboard > .light-blue-bg {
+    background-color: var(--blue-color);
+    color: var(--dark-blue-color);
+}
+main > .calculator > .keyboard > .dark-blue-bg {
+    background-color: var(--dark-blue-color);
+    color: var(--blue-color);
+}
+main > .calculator > .keyboard > .dark-blue-bg:hover {
+    background-color: var(--light-grey-color);
+    color: var(--dark-blue-color);
+}
